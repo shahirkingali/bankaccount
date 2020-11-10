@@ -10,3 +10,6 @@ class BankAccount:
  def __init__(self):
         self.balance = 0
 #Function takes in the amount you put in
+def deposit(self, amount):
+        self.balance = self.balance + amount
+#Function will take away amount from accotunt
