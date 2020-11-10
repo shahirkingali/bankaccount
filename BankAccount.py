@@ -1,29 +1,34 @@
-#Intaialze the class
-#Class attributes
-class BankAccount:
-    def __init__(self, fullname, accountnumber, routingnumber, accountbalance):
-      self.fullname = fullname
-      self.accountnumber = accountnumber
-      self.routingnumber = routingnumber 
-      self.accountbalance = accountbalance
+class BankAccount(object):
+    interestRate = 0.00083
+    AccountNum = 87654672
+    RoutingNum = 223344556
 
- def __init__(self):
-        self.balance = 0
-#Function takes in the amount you put in
-def deposit(self, amount):
-        self.balance = self.balance + amount
-#Function will take away amount from accotunt
-def withdraw(self, amount):
-        if self.balance >= amount:
-            self.balance -= amount
+    def __init__(self, name, bal):
+        self.__name = name 
+        self.__balance = bal 
+        self.__accountnumber = BankAccount.nextAccountNum
+        BankAccount.nextAccountNum += 1
+
+    def __str__(self):
+        output = "Name: " + str(self.__name) + "\n"
+        output += "AccNum: " + str(self.__accountNumber) + "\n"
+        output += "Balance:$ " + str(self.__balance) + "\n"
+
+    def deposit(self, amount):
+        self.__balance += amount
+
+    def withdraw(self, amount):
+        if self.__balance >= amount:
+            self.__balance -= amount
         else:
-            print("Insefficient funds")
-    def print_balance(slef):
-        return self.balance
+            print("Amount Withdrawn " + str(self.__accountNumber))
+            print("Insufficient funds ", amount)
 
-#Create an isntance
-account = BankAccount()
+    def addIntrest(self):
+        amount = self.__balance * BankAccount.interestRate
+        self.addIntrest(amount)
 
-#Will desposit amount into account
-account.deposit(100)
-print(account.print_balance)
+    def get_balance(self):
+        self.show_details()
+        print("Account balance: $", self.balance)
+
