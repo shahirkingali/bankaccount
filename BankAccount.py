@@ -13,3 +13,7 @@ class BankAccount:
 def deposit(self, amount):
         self.balance = self.balance + amount
 #Function will take away amount from accotunt
+def withdraw(self, amount):
+        if self.balance >= amount:
+            self.balance -= amount
+        else:
