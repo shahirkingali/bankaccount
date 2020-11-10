@@ -20,3 +20,6 @@ def withdraw(self, amount):
             print("Insefficient funds")
     def print_balance(slef):
         return self.balance
+
+#Create an isntance
+account = BankAccount()
