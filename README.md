@@ -1,4 +1,4 @@
-# bankaccount
+# BankAccount
 This bank account should all a user to do the following:
 
 Your Python program should be created in one file called BankAccount.py.
