@@ -23,3 +23,7 @@ def withdraw(self, amount):
 
 #Create an isntance
 account = BankAccount()
+
+#Will desposit amount into account
+account.deposit(100)
+print(account.print_balance)
