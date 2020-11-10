@@ -32,3 +32,8 @@ class BankAccount(object):
         self.show_details()
         print("Account balance: $", self.balance)
 
+if __name__== '__main__':
+    account1 = BankAccount("Shahir", 10000.00)
+    print(account1)
+    account1.addIntrest()
+    print(account1)
