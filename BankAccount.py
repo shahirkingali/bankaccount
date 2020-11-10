@@ -17,3 +17,6 @@ def withdraw(self, amount):
         if self.balance >= amount:
             self.balance -= amount
         else:
+            print("Insefficient funds")
+    def print_balance(slef):
+        return self.balance
